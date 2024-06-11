@@ -14,8 +14,6 @@
 
 Aplikasi ini merupakan aplikasi yang menawarkan layanan ai berupa Generate Text, Text to Image, Transcibe AI, dan Chat PDF. Fitur Generate Text berperan dalam menghasilkan teks berdasarkan inputan pengguna. Fitur Text to Image berperan dalam menghasilkan gambar sesuai inputan pengguna. Fitur Transcribe AI berperan dalam mengonversi audio menjadi teks. Dan terakhir fitur Chat PDF berperan dalam membantu mencari informasi di dalam sebuah dokumen. Aplikasi ini bertujuan dalam meningkatkan produktivitas pengguna.
 
-## Cara Menggunakan
 
-[Berikan petunjuk tentang cara menggunakan proyek ini. Langkah-langkah instalasi, persyaratan sistem, dan contoh penggunaan bisa dimasukkan di sini.]
 
 
