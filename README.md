@@ -4,10 +4,10 @@
 
 | No | Nama Lengkap              | NIM               | Fitur            | Email              |
 |----|---------------------------|-------------------|------------------|--------------------|
-| 1  | Muhammad Za'im Al Faruq   | 1202210410           | Chat With PDF | email1@example.com |
-| 2  | Rachmawati                | 1202213349           | Dashboard & Transcribe AI  | email2@example.com |
-| 3  | David Tri Wijayanto       | 1202210050           | Generate Text         | email3@example.com | 
-| 4  | Stefanus Ario Prabowo     | 1202210020           | About us & Text to Image   | email4@example.com |
+| 1 | Muhammad Za'im Al Faruq   | 1202210410           | Chat With PDF | email1@example.com |
+| 2 | Rachmawati                | 1202213349           | Dashboard & Transcribe AI  | email2@example.com |
+| 3 | David Tri Wijayanto       | 1202210050           | Generate Text         | email3@example.com | 
+| 4 | Stefanus Ario Prabowo     | 1202210020           | About us & Text to Image   | email4@example.com |
 
 
 ## Deskripsi Proyek
