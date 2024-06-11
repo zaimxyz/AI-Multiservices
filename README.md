@@ -2,12 +2,12 @@
 
 ## Anggota Kelompok
 
-| No | Nama Lengkap              | NIM               | Fitur            | Email              | GitHub                                               |
-|----|---------------------------|-------------------|------------------|--------------------|--------------------------------------------------------|
-| 1  | Muhammad Za'im Al Faruq   | 1202210410           | Chat With PDF | email1@example.com | [GitHub 1](https://www.linkedin.com/in/username1)    |
-| 2  | Rachmawati                | 1202213349           | Dashboard & Transcribe AI  | email2@example.com | [GitHub 2](https://www.linkedin.com/in/username2)    |
-| 3  | David Tri Wijayanto       | 1202210050           | Generate Text         | email3@example.com | [GitHub 3](https://www.linkedin.com/in/username3)    |
-| 4  | Stefanus Ario Prabowo     | 1202210020           | About us & Text to Image   | email4@example.com | [GitHub 4](https://www.linkedin.com/in/username4)    |
+| No | Nama Lengkap              | NIM               | Fitur            | Email              |
+|----|---------------------------|-------------------|------------------|--------------------|
+| 1  | Muhammad Za'im Al Faruq   | 1202210410           | Chat With PDF | email1@example.com |
+| 2  | Rachmawati                | 1202213349           | Dashboard & Transcribe AI  | email2@example.com |
+| 3  | David Tri Wijayanto       | 1202210050           | Generate Text         | email3@example.com | 
+| 4  | Stefanus Ario Prabowo     | 1202210020           | About us & Text to Image   | email4@example.com |
 
 
 ## Deskripsi Proyek
