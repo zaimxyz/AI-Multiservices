@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speech-to-Text Upload</title>
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(to right, #4A00E0, #8E2DE2);
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+
+    .header {
+        background-color: rgba(255, 255, 255, 0.1);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+        padding: 1rem 2rem;
+    }
+
+    .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nav__logo img {
+        height: 40px;
+    }
+
+    .nav__menu {
+        display: flex;
+        align-items: center;
+    }
+
+    .nav__list {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav__item {
+        margin-left: 1.5rem;
+    }
+
+    .nav__link {
+        text-decoration: none;
+        color: #fff;
+        font-size: 1rem;
+    }
+
+    .nav__actions {
+        display: flex;
+        align-items: center;
+    }
+
+    .nav__login {
+        margin-left: 1rem;
+    }
+
+    .nav__login a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 1rem;
+    }
+
+    .nav__toggle {
+        margin-left: 1rem;
+        cursor: pointer;
+    }
+
+    .nav__login i,
+    .nav__toggle i {
+        font-size: 1.5rem;
+        color: #fff;
+    }
+
+    .main {
+        margin-top: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 20px;
+    }
+
+    .container {
+        text-align: center;
+    }
+
+    h1 {
+        margin-bottom: 20px;
+    }
+
+    form {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 300px;
+        margin-bottom: 20px;
+    }
+
+    label, input, button {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    button {
+        background-color: #1e3c72;
+        color: white;
+        border: none;
+        padding: 10px;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    button:hover {
+        background-color: #2a5298;
+    }
+
+    #loading {
+        display: none;
+        font-style: italic;
+        color: grey;
+    }
+
+    #result-container {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        width: 300px;
+        max-height: 200px;
+        overflow-y: auto;
+    }
+
+    #result {
+        white-space: pre-wrap;
+        text-align: left;
+    }
+    </style>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css">
+</head>
+<body>
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="/" class="nav__logo">
+                <img src="https://media.istockphoto.com/id/1182950590/vector/ai-logo-letter-vector-template-design-illustration-ai-logo-letter-vector-concept-design.jpg?s=612x612&w=0&k=20&c=BQDfp9wnDYO_1PSbEUvNswCF2e3Z7TuzsBxyPgK3x1M=" alt="Logo">
+            </a>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="/transcribe" class="nav__link">Transcribe</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="/generate-text" class="nav__link">Generate Text</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="/text-to-image" class="nav__link">Text to Image</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="/chat-with-pdf" class="nav__link">Chat with PDF</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="nav__actions">
+                <div class="nav__login" id="login-btn">
+                    <a href="/about-us">About Us</a>
+                    <a href="/login"> <i class="ri-user-line"></i></a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="main">
+        <div class="container">
+            <h1>Transcribe AI</h1>
+            <form id="uploadForm">
+                <label for="audioFile">Choose audio file:</label>
+                <input type="file" id="audioFile" name="audio" accept="audio/*" required>
+                <button type="submit">Upload</button>
+            </form>
+            <div id="loading">Processing your audio file, please wait...</div>
+            <div id="result-container">
+                <div id="result"></div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.getElementById('uploadForm').addEventListener('submit', async (event) => {
+            event.preventDefault();
+
+            const formData = new FormData();
+            const audioFile = document.getElementById('audioFile').files[0];
+
+            if (!audioFile) {
+                alert('Please select an audio file to upload.');
+                return;
+            }
+
+            formData.append('audio', audioFile);
+
+            // Show loading indicator
+            document.getElementById('loading').style.display = 'block';
+            document.getElementById('result').textContent = '';
+
+            try {
+                const response = await fetch('https://iaetranscribeai.22mzaima.workers.dev', { // Replace with your actual endpoint
+                    method: 'POST',
+                    body: formData
+                });
+
+                if (!response.ok) {
+                    throw new Error('Failed to process the audio file.');
+                }
+
+                const result = await response.json();
+                const text = result.response.text;
+                document.getElementById('result').textContent = text;
+            } catch (error) {
+                document.getElementById('result').textContent = `Error: ${error.message}`;
+            } finally {
+                // Hide loading indicator
+                document.getElementById('loading').style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

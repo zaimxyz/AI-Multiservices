@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <!-- Custom CSS -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f9fa;
+      color: #333;
+    }
+    
+    .section-heading {
+      color: #201313;
+      margin-bottom: 40px;
+    }
+    .about-section {
+      padding: 50px 0;
+      background-color: #343a40;
+      color: #fff;
+    }
+    .about-section h2 {
+      font-size: 42px;
+      margin-bottom: 20px;
+      color: #ff9800; /* New color for the "About Us" title */
+    }
+    .about-section p {
+      font-size: 20px;
+    }
+    .team-section {
+      padding: 50px 0;
+      background-color: #f8f9fa;
+    }
+    .team-member {
+      margin-bottom: 30px;
+      text-align: center;
+      cursor: pointer;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+    .team-member img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      transition: transform 0.3s ease;
+    }
+    .team-member img:hover {
+      transform: scale(1.1);
+    }
+    .team-member h3 {
+      margin-top: 20px;
+      font-size: 24px;
+    }
+    .team-member p {
+      color: #666;
+    }
+    .feature-section {
+      padding: 50px 0;
+      background-color: #fff;
+      text-align: center;
+    }
+    .feature-section h2 {
+      font-size: 42px;
+      margin-bottom: 40px;
+    }
+    .feature-item {
+      margin-bottom: 40px;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+    .feature-item img {
+      width: 96px;
+      height: 96px;
+      margin-bottom: 20px;
+    }
+    .testimonial-section {
+      padding: 50px 0;
+      background-color: #f8f9fa;
+      text-align: center;
+    }
+    .testimonial-section h2 {
+      font-size: 42px;
+      margin-bottom: 40px;
+    }
+    .testimonial {
+      margin-bottom: 30px;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      opacity: 0;
+      transform: translateY(20px);
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+    .testimonial p {
+      font-size: 18px;
+      color: #666;
+    }
+    .testimonial strong {
+      color: #333;
+    }
+    @media (max-width: 767px) {
+      .team-member img {
+        width: 100px;
+        height: 100px;
+      }
+      .team-member h3 {
+        font-size: 20px;
+      }
+      .about-section h2, .feature-section h2, .testimonial-section h2 {
+        font-size: 42px;
+      }
+      .about-section p, .testimonial p {
+        font-size: 16px;
+      }
+    }
+    .fade-in {
+      opacity: 1 !important;
+      transform: translateY(0) !important;
+    }
+  </style>
+</head>
+<body>
+
+<section class="about-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        <h2 class="section-heading">About Us</h2>
+        <p>We are undergraduate students majoring in Information Systems, committed to delivering innovative solutions through our AI applications. This project is a significant part of our major assignment in Enterprise Application Integration.</p>
+        <p>Our goal is to integrate modern AI technologies into practical applications that can enhance productivity and efficiency. With a diverse team skilled in natural language processing, computer vision, software development, and data analysis, we aim to create impactful AI solutions.</p>
+        <p>Our vision is to become leaders in the AI industry by providing advanced yet user-friendly solutions that seamlessly integrate with existing systems. We believe in the transformative potential of AI and are dedicated to helping realize that potential through our projects.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="team-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h1 class="section-heading">Our Team</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-3 col-md-6 col-sm-12">
+        <div class="team-member" data-toggle="modal" data-target="#zaimModal">
+          <img src="https://img.icons8.com/color/96/000000/user-male-circle--v1.png" alt="Muhammad Za'im Al Faruq"/>
+          <h3>Muhammad Za'im Al Faruq</h3>
+          <p>1202210410</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12">
+        <div class="team-member" data-toggle="modal" data-target="#rachmaModal">
+          <img src="https://img.icons8.com/color/96/000000/user-female-circle--v1.png" alt="Rachmawati"/>
+          <h3>Rachmawati</h3>
+          <p>1202213349</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12">
+        <div class="team-member" data-toggle="modal" data-target="#davidModal">
+          <img src="https://img.icons8.com/color/96/000000/user-male-circle--v1.png" alt="David Tri Wijayanto"/>
+          <h3>David Tri Wijayanto</h3>
+          <p>1202210050</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12">
+        <div class="team-member" data-toggle="modal" data-target="#stefanusModal">
+          <img src="https://img.icons8.com/color/96/000000/user-male-circle--v1.png" alt="Stefanus Ario Prabowo"/>
+          <h3>Stefanus Ario Prabowo</h3>
+          <p>1202210020</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Modals -->
+<div class="modal fade" id="zaimModal" tabindex="-1" role="dialog" aria-labelledby="zaimModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="zaimModalLabel">Muhammad Za'im Al Faruq - Senior Developer</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Muhammad adalah pengembang senior di tim kami. Dengan keahliannya dalam pemrograman dan desain sistem, Muhammad bertanggung jawab atas pengembangan inti dari aplikasi AI kami. Dia juga berperan dalam melakukan review kode dan memastikan kualitas perangkat lunak kami.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="rachmaModal" tabindex="-1" role="dialog" aria-labelledby="rachmaModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="rachmaModalLabel">Rachmawati - Product Manager</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Rachma adalah manajer produk kami. Dia mengelola roadmap produk dan bekerja dengan tim pengembangan untuk memastikan bahwa setiap fitur yang dirilis sesuai dengan kebutuhan pengguna. Dengan latar belakang dalam manajemen produk, Rachma memastikan bahwa aplikasi AI kami selalu up-to-date dengan tren terbaru di industri.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="davidModal" tabindex="-1" role="dialog" aria-labelledby="davidModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="davidModalLabel">David Tri Wijayanto - UX/UI Designer</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        David adalah desainer UX/UI kami. Dia bertanggung jawab atas pengalaman pengguna dan antarmuka dari aplikasi AI kami. David bekerja erat dengan tim pengembangan untuk memastikan bahwa aplikasi kami tidak hanya fungsional tetapi juga mudah digunakan dan menarik secara visual.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="stefanusModal" tabindex="-1" role="dialog" aria-labelledby="stefanusModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="stefanusModalLabel">Stefanus Ario Prabowo - Data Scientist</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      Stefanus adalah ilmuwan data di tim kami. Dia bertanggung jawab untuk menganalisis data dan mengembangkan model AI yang digunakan dalam aplikasi kami. Dengan latar belakang dalam matematika dan statistik, Stefanus memastikan bahwa solusi AI kami berdasarkan data yang akurat dan relevan.
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+    </div>
+  </div>
+</div>
+</div>
+
+<section class="feature-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2 class="section-heading">Our Features</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-3 col-md-6 col-sm-12 feature-item">
+        <img src="https://img.icons8.com/color/96/000000/voice-recognition-scan.png" alt="Transcribe AI"/>
+        <h3>Transcribe AI</h3>
+        <p>Mengonversi audio menjadi teks dengan akurasi tinggi.</p>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12 feature-item">
+        <img src="https://img.icons8.com/?size=100&id=59518&format=png&color=000000" alt="GenerateText AI"/>
+        <h3>GenerateText AI</h3>
+        <p>Menghasilkan teks otomatis berdasarkan input tertentu.</p>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12 feature-item">
+        <img src="https://img.icons8.com/color/96/000000/image.png" alt="TextToImage AI"/>
+        <h3>TextToImage AI</h3>
+        <p>Mengonversi teks menjadi gambar dengan bantuan kecerdasan buatan.</p>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12 feature-item">
+        <img src="https://img.icons8.com/color/96/000000/search.png" alt="SearchTextAI"/>
+        <h3>ChatWithPDF</h3>
+        <p>Menggunakan teknologi AI untuk menganalisis dan membaca dokumen teks untuk melakukan pencarian informasi.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="testimonial-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <h2 class="section-heading">Testimonials</h2>
+        <div class="testimonial">
+          <p>"Solusi AI yang dikembangkan oleh tim ini benar-benar mengubah cara kami bekerja. Efisiensi kami meningkat drastis!" - <strong>Jane Doe, CEO of TechCorp</strong></p>
+        </div>
+        <div class="testimonial">
+          <p>"Layanan pelanggan yang luar biasa dan solusi yang sangat inovatif. Kami sangat merekomendasikan mereka." - <strong>John Smith, CTO of Innovate Inc.</strong></p>
+        </div>
+        <div class="testimonial">
+          <p>"Kami sangat puas dengan hasil yang kami dapatkan dari penggunaan teknologi AI ini. Sangat membantu dalam analisis data kami." - <strong>Emily White, Data Analyst at DataSolutions</strong></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<!-- Custom JS for animations -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const options = {
+      threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('fade-in');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, options);
+
+    const elements = document.querySelectorAll('.team-member, .feature-item, .testimonial');
+    elements.forEach(element => {
+      observer.observe(element);
+    });
+  });
+</script>
+</body>
+</html>

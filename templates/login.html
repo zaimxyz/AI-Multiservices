@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <style>
+        body {
+            background: #8E2DE2;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #4A00E0, #8E2DE2);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #4A00E0, #8E2DE2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+        }
+
+        .card {
+            background-color: rgba(255, 255, 255, 0.15);
+            border: none;
+            border-radius: 15px;
+        }
+
+        .card .card-body {
+            padding: 2rem;
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .form-control {
+            background-color: rgba(255, 255, 255, 0.1);
+            border: none;
+            color: #fff;
+        }
+
+        .form-control:focus {
+            background-color: rgba(255, 255, 255, 0.2);
+            color: #fff;
+        }
+
+        .btn-primary {
+            background-color: #4A00E0;
+            border: none;
+        }
+
+        .btn-primary:hover {
+            background-color: #8E2DE2;
+        }
+
+        a {
+            color: #fff;
+        }
+
+        a:hover {
+            color: #ddd;
+        }
+
+        .header {
+            background-color: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            padding: 1rem 2rem;
+            z-index: 1000;
+            margin-top: -670px;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav__logo img {
+            height: 40px;
+        }
+
+        .nav__list {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav__item {
+            margin-left: 1.5rem;
+        }
+
+        .nav__link {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .nav__login a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 1rem;
+            margin-left: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="/" class="nav__logo">
+                <img src="https://media.istockphoto.com/id/1182950590/vector/ai-logo-letter-vector-template-design-illustration-ai-logo-letter-vector-concept-design.jpg?s=612x612&w=0&k=20&c=BQDfp9wnDYO_1PSbEUvNswCF2e3Z7TuzsBxyPgK3x1M=" alt="Logo">
+            </a>
+            <ul class="nav__list">
+                <li class="nav__item"><a href="/transcribe" class="nav__link">Transcribe</a></li>
+                <li class="nav__item"><a href="/generate-text" class="nav__link">Generate Text</a></li>
+                <li class="nav__item"><a href="/text-to-image" class="nav__link">Text to Image</a></li>
+                <li class="nav__item"><a href="/chat-with-pdf" class="nav__link">Chat with PDF</a></li>
+            </ul>
+            <div class="nav__login">
+                <a href="/about-us">About Us</a>
+                <a href="/login"><i class="ri-user-line"></i></a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="row justify-content-center mt-5">
+            <div class="col-md-6">
+                <div class="card shadow-lg">
+                    <div class="card-body p-5">
+                        <h3 class="card-title text-center mb-4">Login</h3>
+                        <form method="POST" action="">
+                            <div class="form-group">
+                                <label for="username">Username</label>
+                                <input type="text" class="form-control" id="username" name="username" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <input type="password" class="form-control" id="password" name="password" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block mt-4">Login</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

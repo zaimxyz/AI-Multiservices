@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Services Dashboard</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      background: linear-gradient(to right, #4A00E0, #8E2DE2);
+      color: #000;
+    }
+    /* Customize the style here */
+    .service-card {
+      margin-bottom: 20px;
+    }
+    .header {
+      background-color: rgba(255, 255, 255, 0.1);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      padding: 1rem 2rem;
+    }
+    .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .nav__logo img {
+        height: 40px;
+    }
+    .nav__list {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    .nav__item {
+        margin-left: 1.5rem;
+    }
+    .nav__link {
+        color:#fff;
+    }
+    .nav__login a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 1rem;
+        margin-left: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <header class="header" id="header">
+    <nav class="nav container">
+        <a href="/" class="nav__logo">
+            <img src="https://media.istockphoto.com/id/1182950590/vector/ai-logo-letter-vector-template-design-illustration-ai-logo-letter-vector-concept-design.jpg?s=612x612&w=0&k=20&c=BQDfp9wnDYO_1PSbEUvNswCF2e3Z7TuzsBxyPgK3x1M=" alt="Logo">
+        </a>
+        <ul class="nav__list">
+            <li class="nav__item"><a href="/transcribe" class="nav__link">Transcribe</a></li>
+            <li class="nav__item"><a href="/generate-text" class="nav__link">Generate Text</a></li>
+            <li class="nav__item"><a href="/text-to-image" class="nav__link">Text to Image</a></li>
+            <li class="nav__item"><a href="/chat-with-pdf" class="nav__link">Chat with PDF</a></li>
+        </ul>
+        <div class="nav__login">
+            <a href="/about-us">About Us</a>
+            <a href="/login"><i class="ri-user-line"></i></a>
+        </div>
+    </nav>
+  </header>
+
+<div class="container mt-5">
+  <h1 class="text-center mb-4" style="color: #fff;">AI Services Dashboard</h1>
+  
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card service-card">
+        <div class="card-body">
+          <h5 class="card-title">Transcribe AI</h5>
+          <p class="card-text">Convert speech or audio files into text.</p>
+          <a href="/transcribe" class="btn btn-primary">Access Service</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="card service-card">
+        <div class="card-body">
+          <h5 class="card-title">Chat with PDF AI</h5>
+          <p class="card-text">Interact with AI to extract and analyze text from PDF documents.</p>
+          <a href="/chat-with-pdf" class="btn btn-primary">Access Service</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="card service-card">
+        <div class="card-body">
+          <h5 class="card-title">Generate Text AI</h5>
+          <p class="card-text">Automatically generate text based on provided input or prompts.</p>
+          <a href="/generate-text" class="btn btn-primary">Access Service</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="card service-card">
+        <div class="card-body">
+          <h5 class="card-title">Text to Image AI</h5>
+          <p class="card-text">Convert text into images using AI algorithms.</p>
+          <a href="/text-to-image" class="btn btn-primary">Access Service</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap JS (optional, only if you need JavaScript features) -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
